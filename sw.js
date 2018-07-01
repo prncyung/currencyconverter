@@ -1,10 +1,10 @@
-const staticCacheName = 'BrightsCurrencyConverter-static-v4';
+const staticCacheName = 'ultimateCurrencyConverter-static-v4';
 
 const filesToCache = [
   '/',
   './index.html',
-  '../assets/js/appcontroller.js',
-  '../assets/css/ux.css',
+  './assets/js/appcontroller.js',
+  './assets/css/ux.css',
 ];
 
 self.addEventListener('install', function(event) {
@@ -24,7 +24,7 @@ self.addEventListener('install', function(event) {
         return Promise.all(
           cacheNames.filter(function(cacheName) {
              // console.log(cacheName);
-            return cacheName.startsWith('BrightsCurrencyConverter-') && staticCacheName !== cacheName;
+            return cacheName.startsWith('UltimateCurrencyConverter-') && staticCacheName !== cacheName;
           }).map(function(cacheName) {
             if(staticCacheName !== cacheName){
                 return caches.delete(cacheName);
@@ -45,7 +45,7 @@ self.addEventListener('install', function(event) {
         caches.match(event.request).then(response => {
           if (response) {
             // respond with the index page skeleton in cache
-             event.respondWith(caches.match('/ndex.html'));
+             event.respondWith(caches.match('/index.html'));
              return;
           }
         });
