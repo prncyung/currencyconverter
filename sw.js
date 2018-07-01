@@ -1,4 +1,4 @@
-const staticCacheName = 'ultimateCurrencyConverter-static-v4';
+const staticCacheName = 'UltimateCurrencyConverter-static-v4';
 
 const filesToCache = [
   '/',
