@@ -10,7 +10,7 @@ class CurrencyConverter {
     */
     registerServiceWorker() {
         if (!navigator.serviceWorker) return;
-        navigator.serviceWorker.register('/sw.js').then(reg => {});
+        navigator.serviceWorker.register('sw.js').then(reg => {});
     } // close registerServiceWorker method
     /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
      create/open an indexDB database
