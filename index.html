@@ -1,0 +1,79 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Currency converter of different countries" />
+		<meta name="keywords" content="currency converter, currency, converter, countries currency converter, converting countries currency" />
+		<meta name="author" content="karib support currency converter" />
+        <title>Currency Converter</title>
+        <link rel="shortcut icon" type="image/icon" href="assets/img/ccappe.png"/>
+        <!-- Main Style -->
+        <link type="text/css" href="assets/css/ux.css" rel="stylesheet">
+        <!-- Responsive Style -->
+        <link type="text/css" href="assets/css/minified.css" rel="stylesheet">
+    </head>
+    <body>
+        
+        <div id="container">
+            <!-- converter header-->
+            <div class="header-div-section">
+                <h3>CURRENCY CONVERTER</h3>
+            </div>
+            <!-- converter box-->
+            <div class="converter-div-section">
+                <div class="converter-input">
+                    <input type="text" id="amount" class="user-input inpt" name="amount" placeholder="Amount to convert"/>
+                </div>
+               
+                <div class="converter-box">
+                    <div class="currency-option">
+                        <select id="from_cur" class="fromCurrencyDropdown currency" name="fromcurrencyDropdown1">
+                            <option value="" selected>CHOOSE A COUNTRY</option>
+                        </select>
+                    </div>
+                    <div class="currency-option direction-indicator ">
+                            <i class="arrow left"></i>
+                            <i class="arrow right"></i>
+                    </div>
+                    <div class="currency-option">
+                        <select id="to_cur" class="fromCurrencyDropdown currency" name="tocurrencyDropdown2">
+                            <option value="" selected>CHOOSE A COUNTRY</option>
+                         </select>
+                    </div> 
+                </div>
+               
+                <div class="convert-action">
+                    <div class="converter-button-div">
+                        <button class="convertButtonClass" id="btnConvert" type="button" onclick="">CONVERT</button>
+                    </div>
+                    
+                    <div class="converter-button-div converter-output">
+                        <input type="text" id="result" class="converted-user-output inpt" name="result" readonly/> 
+                    </div>
+                </div>
+                <div class="answers" id="alert">
+
+                </div>
+            </div>
+            <!-- footer-->
+            <footer class="footer-section">
+                <div class="gratitude author">
+                   <small>Designed By </small><br>
+                    <li>Benson Iruobe</li>
+                </div>
+               
+                <div class="gratitude sponsors">
+                    <small>Powered By</small><br>
+                    <li><a href="http://www.andela.com/"><img src="assets/img/andela.png" /></a></li>
+                    <li><a href="http://www.google.com"><img src="assets/img/google.png" /></a></li>
+                    <li><a href="http://www.udacity.com"><img src="assets/img/udacity.png"/></a></li>
+                </div>
+            </footer>
+        </div>
+       <!--/Content ends-->
+
+          <script type="text/javascript" src="assets/js/idb.js"></script>
+          <script type="text/javascript" src="assets/js/appcontroller.js"></script>
+    </body>
+</html>

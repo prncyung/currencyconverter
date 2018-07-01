@@ -1,0 +1,201 @@
+/* for mart phones */
+@media only screen and (max-width : 320px){
+    #container{
+		margin:0;
+		width:100%;
+    }
+	.header-div-section{
+		width:100%;
+	}
+	.header-div-section>h3{
+		padding-left:5px;
+	}
+	.converter-div-section{
+    width:100%;
+}
+.currency-option{
+		width:100%;
+		display:block;
+} 
+.direction-indicator{
+    display:none;
+ }
+input{width:100%;}
+select{width:100%;
+	margin-top:10px;
+}
+.convert-button-div,.converter-action,.convertButtonClass{
+	width:100%;
+	display:block;
+	}
+.converted-user-output{
+	margin:0;
+	width:100%;
+	margin-bottom:10px;
+}
+.footer-section{
+	width:100%;
+}
+.gratitude{
+	display:inline;
+	width:100%;
+	background:grey;
+	opacity:1;
+}
+.gratitude>small{ 
+    color:#fff;
+}
+.gratitude>li{
+    margin:20px;	
+}
+
+  
+}
+
+@media only screen and (max-width : 479px){
+   #container{
+		margin:0;
+		width:100%;
+    }
+	.header-div-section{
+		width:100%;
+	}
+	.header-div-section>h3{
+		padding-left:5px;
+	}
+	.converter-div-section{
+    width:100%;
+}
+.currency-option{
+		width:100%;
+		display:block;
+} 
+.direction-indicator{
+    display:none;
+ }
+input{width:100%;}
+select{width:100%;
+	margin-top:10px;
+}
+.convert-button-div,.converter-action,.convertButtonClass{
+	width:100%;
+	display:block;
+	}
+.converted-user-output{
+	margin:0;
+	width:100%;
+	margin-bottom:10px;
+}
+.footer-section{
+	width:100%;
+}
+.gratitude{
+	display:inline;
+	width:100%;
+	background: #191970;
+}
+.gratitude>small{ 
+    color:#fff;
+}
+.gratitude>li{
+    margin:20px 30px 20px 20px;
+}	
+}
+@media only screen and (max-width : 767px){
+	  #container{
+		margin:0;
+		width:100%;
+    }
+	.header-div-section{
+		width:100%;
+	}
+	.header-div-section>h3{
+		padding-left:5px;
+	}
+	.converter-div-section{
+    width:100%;
+}
+.currency-option{
+		width:100%;
+		display:block;
+} 
+.direction-indicator{
+    display:none;
+ }
+input{width:100%;}
+select{width:100%;
+	margin-top:10px;
+}
+.convert-button-div,.converter-action,.convertButtonClass{
+	width:100%;
+	display:block;
+	}
+.converted-user-output{
+	margin:0;
+	width:100%;
+	margin-bottom:10px;
+}
+.footer-section{
+	width:100%;
+}
+.gratitude{
+	display:inline;
+	width:100%;
+	background: #191970;
+}
+.gratitude>small{ 
+    color:#fff;
+}
+.gratitude>li{
+    margin:20px 30px 20px 20px;
+}
+}
+/* for laptops and desktops */
+@media only screen and (min-device-width : 1000px){
+      #container{
+		margin:0;
+		width:100%;
+    }
+	.header-div-section{
+		width:100%;
+	}
+	.header-div-section>h3{
+		padding-left:5px;
+	}
+	.converter-div-section{
+    width:100%;
+}
+.currency-option{
+		width:100%;
+		display:block;
+} 
+.direction-indicator{
+    display:none;
+ }
+input{width:100%;}
+select{width:100%;
+	margin-top:10px;
+}
+.convert-button-div,.converter-action,.convertButtonClass{
+	width:100%;
+	display:block;
+	}
+.converted-user-output{
+	margin:0;
+	width:100%;
+	margin-bottom:10px;
+}
+.footer-section{
+	width:100%;
+}
+.gratitude{
+	display:inline;
+	width:100%;
+}
+.gratitude>small{ 
+    color:#fff;
+}
+.gratitude>li{
+    margin:20px 30px 20px 20px;
+}
+}
