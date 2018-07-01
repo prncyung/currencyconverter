@@ -120,7 +120,7 @@ select{
     font-weight: bold;
     color: #fff;
     text-align: center;
-    text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+    text-shadow: 0 1px rgba(25,25,112,0.5);
     background: #191970;
     border: 1px solid;
     border-color: #191970, #191970, #191970;
@@ -130,8 +130,8 @@ select{
     background-image: -moz-linear-gradient(top, #191970, #191970);
     background-image: -o-linear-gradient(top, #191970, #191970);
     background-image: linear-gradient(to bottom, #191970, #191970);
-    -webkit-box-shadow: inset 0 -1px rgba(84,167,117,1), 0 1px rgba(84,167,117,1);
-    box-shadow: inset 0 -1px rgba(84,167,117,1), 0 1px rgba(84,167,117,1);
+    -webkit-box-shadow: inset 0 -1px rgba(25,25,112,0.5), 0 1px rgba(25,25,112,0.5);
+    box-shadow: inset 0 -1px rgba(25,25,112,0.5), 0 1px rgba(25,25,112,0.5);
  }
  /*
     footer section 
