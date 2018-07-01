@@ -152,10 +152,6 @@ select{width:100%;
 }
 /* for laptops and desktops */
 @media only screen and (min-device-width : 1000px){
-      #container{
-		margin:0;
-		width:100%;
-    }
 	.header-div-section{
 		width:100%;
 	}
