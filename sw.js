@@ -4,7 +4,13 @@ const filesToCache = [
   '/',
   './index.html',
   './assets/js/appcontroller.js',
+  './assets/js/tweak.js',
+  './assets/js/bootstrap.js',
+  './assets/js/bootstrap.min.js',
   './assets/css/ux.css',
+  './assets/css/minified.css',
+  './assets/css/bootstrap.css',
+  './assets/css/bootstrap.min.css'
 ];
 
 self.addEventListener('install', function(event) {
@@ -13,7 +19,7 @@ self.addEventListener('install', function(event) {
       caches.open(staticCacheName).then(function(cache) {
         console.log('service worker installed successfully.');
         return cache.addAll(filesToCache);
-      })
+      }).catch(error => console.log('install '+error))
     );
   });
   //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -32,7 +38,7 @@ self.addEventListener('install', function(event) {
             }
           })
         );
-      })
+      }).catch(error => console.log(error))
     );
   });
   //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
