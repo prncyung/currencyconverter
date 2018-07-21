@@ -1,30 +1,39 @@
+/* for smaller phones */
+@media only screen and (max-width : 290px){
+	.navbar-brand{
+		display: none;
+	}
+	.navbarname{
+		padding-left: 10px;
+		text-transform: uppercase;
+		font-size: 1.1em;
+	}
+	/*dropdown content*/
+	.dropdown-content{
+		padding:5px 5px 5px 20px;
+	}
+}
 /* for mart phones */
 @media only screen and (max-width : 320px){
-    #container{
-		margin:0;
-		width:100%;
-    }
-	.header-div-section{
-		width:100%;
+	.dropdown-content{
+		position: relative;	
+		padding:5px 5px 5px 20px;
 	}
-	.header-div-section>h3{
-		padding-left:5px;
-	}
-	.converter-div-section{
-    width:100%;
+.center-block{
+	width: 100%;
 }
-.currency-option{
-		width:100%;
-		display:block;
-} 
-.direction-indicator{
-    display:none;
- }
+.app-centralize{
+	padding: 0;
+	margin: 0;
+}
+.refresh{
+	padding: 3px 5px 3px 3px;
+}
 input{width:100%;}
 select{width:100%;
 	margin-top:10px;
 }
-.convert-button-div,.converter-action,.convertButtonClass{
+.convertButtonClass{
 	width:100%;
 	display:block;
 	}
@@ -36,48 +45,46 @@ select{width:100%;
 .footer-section{
 	width:100%;
 }
-.gratitude{
-	display:inline;
+.author{
 	width:100%;
-	background:grey;
-	opacity:1;
+	margin: 0 22px 0 22px;
+	display: block;
 }
-.gratitude>small{ 
-    color:#fff;
+.sponsors{
+	width: 100%;
+	margin: 0 22px 0 22px;
+	display: block;
 }
-.gratitude>li{
-    margin:20px;	
+.author{
+	margin: 20px;
+}
+.sponsors{
+	margin: 20px;
 }
 
-  
+ 
 }
 
-@media only screen and (max-width : 479px){
-   #container{
-		margin:0;
-		width:100%;
-    }
-	.header-div-section{
-		width:100%;
+@media only screen and (min-width: 300px) and (max-width : 479px){
+	.dropdown-content{
+		position: relative;	
+		padding:5px 5px 5px 20px;
 	}
-	.header-div-section>h3{
-		padding-left:5px;
+	.center-block{
+		width: 100%;
 	}
-	.converter-div-section{
-    width:100%;
-}
-.currency-option{
-		width:100%;
-		display:block;
-} 
-.direction-indicator{
-    display:none;
- }
+	.app-centralize{
+		padding: 0;
+		margin: 0;
+	}
+	.refresh{
+		padding: 3px 5px 3px 3px;
+	}
 input{width:100%;}
 select{width:100%;
 	margin-top:10px;
 }
-.convert-button-div,.converter-action,.convertButtonClass{
+.convertButtonClass{
 	width:100%;
 	display:block;
 	}
@@ -89,44 +96,45 @@ select{width:100%;
 .footer-section{
 	width:100%;
 }
-.gratitude{
-	display:inline;
-	width:100%;
-	background: #191970;
+.author{
+	width: 100%;
+	text-align: center;
 }
-.gratitude>small{ 
-    color:#fff;
+.sponsors{
+	width: 100%;
+	text-align: center;
 }
-.gratitude>li{
-    margin:20px 30px 20px 20px;
-}	
+
+	
 }
-@media only screen and (max-width : 767px){
-	  #container{
-		margin:0;
-		width:100%;
-    }
-	.header-div-section{
-		width:100%;
+@media only screen and (max-width : 764px) and (min-width: 479px){
+	.dropdown-content{
+		position: relative;
+		padding:5px 5px 5px 20px;	
 	}
-	.header-div-section>h3{
-		padding-left:5px;
-	}
-	.converter-div-section{
-    width:100%;
 }
-.currency-option{
-		width:100%;
-		display:block;
-} 
-.direction-indicator{
-    display:none;
- }
+@media only screen and (max-width : 767px) and (min-width: 479px){
+	.dropdown-content{
+		position: relative;	
+	}
+	.center-block{
+		width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+	.app-centralize{
+		width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+	.refresh{
+		padding: 3px 5px 3px 3px;
+	}
 input{width:100%;}
 select{width:100%;
 	margin-top:10px;
 }
-.convert-button-div,.converter-action,.convertButtonClass{
+.convertButtonClass{
 	width:100%;
 	display:block;
 	}
@@ -138,58 +146,45 @@ select{width:100%;
 .footer-section{
 	width:100%;
 }
-.gratitude{
-	display:inline;
-	width:100%;
-	background: #191970;
+.author{
+	width: 50%;
+	float: left;
 }
-.gratitude>small{ 
-    color:#fff;
+.sponsors{
+	width: 50%;
+	float: right;
 }
-.gratitude>li{
-    margin:20px 30px 20px 20px;
+
 }
+
+@media only screen and (max-width : 832px) and (min-width: 768px){
+	.dropdown-content{
+		margin-left: -100px;	
+	}
 }
-/* for laptops and desktops */
+@media only screen and (max-width : 932px) and (min-width: 833px){
+	.dropdown-content{
+		margin-left: -70px;	
+	}
+}
+
+@media only screen and (max-width : 932px) and (min-width: 768px){
+	.dropdown-content{
+		padding:5px 5px 5px 20px;	
+	}
+	.footer-section{
+		width:60%;
+	}
+	.author{
+		width:50%;
+		margin-top:5px;
+	}
+	.sponsors{
+		width: 50%;
+		margin-top:5px;
+	}
+
+}
+/* for laptops and desktops 
 @media only screen and (min-device-width : 1000px){
-	.header-div-section{
-		width:100%;
-	}
-	.header-div-section>h3{
-		padding-left:5px;
-	}
-	.converter-div-section{
-    width:100%;
-}
-.currency-option{
-		width:100%;
-		display:block;
-} 
-.direction-indicator{
-    display:none;
- }
-input{width:100%;}
-select{width:100%;
-	margin-top:10px;
-}
-.convert-button-div,.converter-action,.convertButtonClass{
-	width:100%;
-	display:block;
-	}
-.converted-user-output{
-	margin:0;
-	width:100%;
-	margin-bottom:10px;
-}
-.footer-section{
-	width:100%;
-}
-.gratitude{
-	display:inline;
-	width:100%;
-}
-
-.gratitude>li{
-    margin:20px 30px 20px 20px;
-}
-}
+}*/
