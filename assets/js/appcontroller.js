@@ -10,7 +10,7 @@ class CurrencyConverter {
     */
     registerServiceWorker() {
         if (!navigator.serviceWorker) return;
-        navigator.serviceWorker.register('sw.js').then(reg => {});
+        navigator.serviceWorker.register('./sw.js').then(reg => {});
     } // close registerServiceWorker method
     /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
      create/open an indexDB database
@@ -141,7 +141,7 @@ class CurrencyConverter {
      method that fetches the list of available currencies from the api online
     */
     getAllCurrencies() {
-        fetch('https://free.currencyconverterapi.com/api/v5/currencies').then(currencies => {
+        fetch('http://free.currencyconverterapi.com/api/v5/currencies').then(currencies => {
             return currencies.json();
         }).then(currencies => {
             // loop through the returned currencies from 
@@ -202,7 +202,7 @@ class CurrencyConverter {
         toCurrency = encodeURIComponent(toCurrency);
         let query = fromCurrency + '_' + toCurrency;
 
-        return fetch('https://free.currencyconverterapi.com/api/v5/convert?q='+ query + '&compact=ultra').then(response => {
+        return fetch('http://free.currencyconverterapi.com/api/v5/convert?q='+ query + '&compact=ultra').then(response => {
             return response.json();
         }).then(response => {
              /*appStatus denotes where currency rate was obtained from
@@ -250,6 +250,7 @@ class CurrencyConverter {
             converter.getConversionRate(amount,fromCurrency,toCurrency).then( response =>{ 
                  const rate = response.currencyRate;
                  const appStatus = response.appStatus; // get state of user when currency rate was obtained
+                 console.log('app status is: '+appStatus);
                 if(rate !== undefined)
                 {
                     const result = amount * rate; // performs currency convertion
@@ -258,7 +259,8 @@ class CurrencyConverter {
                     msg = "Conversion rate : " + rate;
                     converter.postToHTMLPage('result','','', msg, result); // call to method that handles dom communication.
                     // add conversion rate to cache if currency rate was obtained from api
-                    if(appStatus ==='online')  converter.addCurrencyRateToCache(rate, fromCurrency, toCurrency); 
+                    if(appStatus ==='Online')  converter.addCurrencyRateToCache(rate, fromCurrency, toCurrency); 
+                    
                 }
                 else converter.postToHTMLPage('','','', 'You are offline and no currency rate was found in cache');
             }).catch( error => {
