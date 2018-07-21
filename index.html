@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -5,75 +6,149 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="Currency converter of different countries" />
 		<meta name="keywords" content="currency converter, currency, converter, countries currency converter, converting countries currency" />
-		<meta name="author" content="karib support currency converter" />
+		<meta name="author" content="Benson Iruobe" />
         <title>Currency Converter</title>
-        <link rel="shortcut icon" type="image/icon" href="assets/img/ccappe.png"/>
+        <!-- Web Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+        <!-- Bootstrap Core CSS -->
+        <link href="assets/css/bootstrap.css" rel="stylesheet">
+         <!-- Bootstrap Theme CSS -->
+        <link rel="shortcut icon" type="image/icon" href="assets/img/icons/icon-32x32.png"/>
         <!-- Main Style -->
         <link type="text/css" href="assets/css/ux.css" rel="stylesheet">
         <!-- Responsive Style -->
         <link type="text/css" href="assets/css/minified.css" rel="stylesheet">
+        <!-- manifest -->
+        <link  href="manifest.json" rel="manifest">
+        <!--Apple devices-->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <!-- this can be applied for ios splash screen...
+        <link rel="apple-touch-startup-image" href="" media="(device-width: 320px) and (device-height: 568px) and 
+        (-webkit-device-pixel-ratio: 2) and (orientation:portrait) ">
+        <link rel="apple-touch-startup-image" href="" media="(min-device-width: 834px) and (max-device-height: 834px) and 
+        (-webkit-min-device-pixel-ratio: 2) and (orientation:portrait) ">-->
+        
+        <meta name="apple-mobile-web-app-capable" content="Currency Converter App">
+        <meta name="apple-touch-icon" content="img/icons/currencylogo.png">
+        <!--microsoft devices-->
+        <meta name="msapplication-TileImage" content="img/icons/icon-144x144.png">
+        <meta name="msapplication-TileColor" content="#2f3ba2">
+        <!--theme color-->
+        <meta name="theme-color" content="#191970"/>
+        <meta name="mobile-web-app-capable" content="yes"/>
     </head>
     <body>
-        
-        <div id="container">
-            <!-- converter header-->
-            <div class="header-div-section">
-                <h3>CURRENCY CONVERTER</h3>
-            </div>
-            <!-- converter box-->
-            <div class="converter-div-section">
-                <div class="converter-input">
-                    <input type="text" id="amount" class="user-input inpt" name="amount" placeholder="Amount to convert"/>
+        <header>
+            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse">
+                            <span class="sr-only"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html"><img src="assets/img/currencylogo.png" alt="logo-image"/>
+                        </a>
+                        <span class="navbarname pull-left">Currency Converter</span>
+                    </div>
+                    <div class="collapse navbar-collapse" id="collapse">
+                        <ul class="nav navbar-nav navbar-right" >
+                            <li class="active"><a href="index.html">Home</a></li>
+                            <li onclick="myFunction()" ><a class="dropbtn">Contact</a>
+                                <div class="dropdown">
+                                    <div id="myDropdown" class="dropdown-content">
+                                       <small class="dropdown-contact">About</small>
+                                            <h6>CAC is an application that converts curriencies in different countries. It 
+                                        is a Progressive Web Application.</h6>
+                                       <small class="dropdown-contact">Contact</small>
+                                            <h6><a href="#"> <li><img class="contact-icon" src="assets/img/mail.png"/> info@newkaribtech.com </li></a></h6>
+                                            <h6><a href="http://www.newkaribtech.com"> <li><img class="contact-icon" src="assets/img/open.png"/>Karib Support</li> </a></h6>
+                                    </div>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                    </div>
                 </div>
-               
-                <div class="converter-box">
-                    <div class="currency-option">
-                        <select id="from_cur" class="fromCurrencyDropdown currency" name="fromcurrencyDropdown1">
-                            <option value="" selected>CHOOSE A COUNTRY</option>
-                        </select>
-                    </div>
-                    <div class="currency-option direction-indicator ">
-                            <i class="arrow left"></i>
-                            <i class="arrow right"></i>
-                    </div>
-                    <div class="currency-option">
-                        <select id="to_cur" class="fromCurrencyDropdown currency" name="tocurrencyDropdown2">
-                            <option value="" selected>CHOOSE A COUNTRY</option>
-                         </select>
-                    </div> 
-                </div>
-               
-                <div class="convert-action">
-                    <div class="converter-button-div">
-                        <button class="convertButtonClass" id="btnConvert" type="button" onclick="">CONVERT</button>
-                    </div>
+            </nav>
+        </header>
+        <main>
+                <div id="contents" class="row">
+                    <div class="center-block">
+                            <div class="app-centralize">
+                                <div class="refresh">
+                                    <img class="reload reloadBtn" role="refresh" aria-labelledby="refreshbutton" src="assets/img/refresh.svg" alt="refreshButton" onClick="window.location.reload(true)"/>
+                                </div><!-- reload window-->
+                                <!-- converter box-->
+                                <div class="row">
+                                    <div class="form-group col-md-11">
+                                        <label class="col-sm-4 control-label" for="amount">Input Value:</label>
+                                        <input type="text" id="amount" class="user-input inpt form-control" name="amount" placeholder="Amount to convert" role="combobox"/>
+                                    </div><!--Input value-->
+                                    <div class="row form-group col-md-12">
+                                        <div class="form-group col-md-6">
+                                            <label class="col-sm-2 control-label" for="option">From:</label>
+                                                <select id="from_cur" class="fromCurrencyDropdown currency form-control col-md-4" name="fromcurrencyDropdown1">
+                                                <option value="" selected>CHOOSE A COUNTRY</option>
+                                            </select>
+                                        </div><!--FROM-->
+                                        <div class="form-group col-md-6">
+                                            <label class="col-sm-2 control-label" for="option">To:</label>
+                                            <select id="to_cur" class="fromCurrencyDropdown currency form-control col-md-4" name="tocurrencyDropdown2">
+                                                <option value="" selected>CHOOSE A COUNTRY</option>
+                                            </select>
+                                        </div> <!--TO-->
+                                    </div><!--convert from and to-->
+                                    <div class="row form-group col-md-12">
+                                        <div class="form-group col-md-6">
+                                            <button class="convertButtonClass btn btn-default" id="btnConvert" type="button" role=button onclick="" >CONVERT</button>
+                                        </div><!--button-->
+                                        <div class="form-group col-md-6">
+                                            <label class="col-sm-4 control-label">Result:</label>
+                                            <input type="text" id="result" class="converted-user-output inpt form-control col-md-4" name="result" role="combobox" readonly/> 
+                                        </div><!--display-->
+                                    </div><!--convert button and answers-->
+                                    <div class="row notification">
+                                        <div class="answers col-md-6" id="alert"></div><!--Notification-->
+                                    </div><!--notification box-->
+                                    
+                                </div><!--conver box-->
+                                <div class="row">
+                                    <footer class="col-md-12 footer-section">
+                                        <div class="author col-md-6">
+                                            <small>Designed By: <span>Benson Iruobe</span></small><br>
+                                            <li><a href="http://www.github.com/prncyung/"><img class="github" src="assets/img/github-original.svg" alt="github-acct"/></a></li>
+                                            <li><a href="http://www.linkedin.com/in/benson-iruobe"><img class="linkedin" src="assets/img/linkedin-original.svg" alt="linkedin-acct"/></a></li>   
+                                            <li><a href="http://www.twitter.com/prncyung"><img class="linkedin" src="assets/img/twitter-original.svg" alt="twitter-acct"/></a></li>
+
+                                        </div><!--Author-->
+                                        <div class="sponsors col-md-6">
+                                            <small>Powered By</small><br>
+                                            <li><a href="http://www.andela.com/"><img src="assets/img/andela.png" alt="andela"/></a></li>
+                                            <li><a href="http://www.google.com"><img src="assets/img/google-original.svg" alt="google"/></a></li>
+                                            <li><a href="http://www.udacity.com"><img src="assets/img/udacity-original.svg" alt="udacity"/></a></li>
+                                        </div><!--Sponsors-->
+                                    </footer><!--footer-->
+                                </div><!--footer section-->
+                            </div><!--App centralize-->
+                    </div><!--center block div-->
+                </div>    
                     
-                    <div class="converter-button-div converter-output">
-                        <input type="text" id="result" class="converted-user-output inpt" name="result" readonly/> 
-                    </div>
-                </div>
-                <div class="answers" id="alert">
-
-                </div>
-            </div>
-            <!-- footer-->
-            <footer class="footer-section">
-                <div class="gratitude author">
-                   <small>Designed By </small><br>
-                    <li>Benson Iruobe</li>
-                </div>
-               
-                <div class="gratitude sponsors">
-                    <small>Powered By</small><br>
-                    <li><a href="http://www.andela.com/"><img src="assets/img/andela.png" /></a></li>
-                    <li><a href="http://www.google.com"><img src="assets/img/google.png" /></a></li>
-                    <li><a href="http://www.udacity.com"><img src="assets/img/udacity.png"/></a></li>
-                </div>
-            </footer>
-        </div>
+        </main>
+        
        <!--/Content ends-->
-
-          <script type="text/javascript" src="assets/js/idb.js"></script>
-          <script type="text/javascript" src="assets/js/appcontroller.js"></script>
+            <!-- / indexDB  -->
+         <script type="text/javascript" src="assets/js/idb.js"></script>
+            <!-- / controlling the Api -->
+         <script type="text/javascript" src="assets/js/appcontroller.js"></script>
+          <!-- / to -->
+         <script type="text/javascript" src="assets/js/tweak.js"></script>
+          <!-- / jquery -->
+         <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
+         <!-- Bootstrap Core JavaScript -->
+	    <script src="assets/js/bootstrap.min.js"></script>
+         
     </body>
 </html>
